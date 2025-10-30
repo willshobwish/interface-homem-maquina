@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 div {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly; /* this controls spacing */
   align-items: center;
-  background-color: #1690f3;
+  background-color: #a6cff0;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 a {
   font-size: 24pt;
-  color: white;
+  color: black;
+  font-family: Roboto;
+  font-weight: bold;
 }
