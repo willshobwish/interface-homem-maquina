@@ -1,11 +1,15 @@
 .outer {
   display: flex;
   flex-direction: column;
-//   justify-content: space-evenly; 
-margin-left: 10px;
+  margin-left: 10px;
+  width: 300px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
+
 .outer_div {
   display: flex;
   flex-direction: row;
-padding-bottom: 10px;
+  align-items: center;
+  justify-content: center;
 }

@@ -1,12 +1,14 @@
-<form [formGroup]="login" (ngSubmit)="onSubmit()">
-  <label>E-mail institucional:</label>
-  <input formControlName="email" />
-  <div *ngIf="login.get('email')?.invalid && login.get('email')?.touched">
-    É necessário o e-mail institucional.
-  </div>
+<div class="outer_div">
+  <form [formGroup]="login" (ngSubmit)="onSubmit()" >
+    <label>E-mail institucional:</label>
+    <input formControlName="email" />
+    <div *ngIf="login.get('email')?.invalid && login.get('email')?.touched">
+      É necessário o e-mail institucional.
+    </div>
 
-  <label>Senha:</label>
-  <input formControlName="password" type="password"/>
-
-  <button type="submit" [disabled]="!login.valid">Submit</button>
-</form>
+    <label>Senha:</label>
+    <input formControlName="password" type="password" />
+<br>
+    <button type="submit" [disabled]="!login.valid">Submit</button>
+  </form>
+</div>
