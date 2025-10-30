@@ -2,4 +2,12 @@ div {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly; /* this controls spacing */
+  align-items: center;
+  background-color: #1690f3;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+a {
+  font-size: 24pt;
+  color: white;
 }
