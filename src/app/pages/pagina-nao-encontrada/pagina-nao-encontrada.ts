@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router ,RouterLink} from '@angular/router';
 @Component({
   selector: 'app-pagina-nao-encontrada',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './pagina-nao-encontrada.html',
   styleUrl: './pagina-nao-encontrada.scss',
 })
@@ -11,6 +11,6 @@ export class PaginaNaoEncontrada implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.router.navigate(['/']);
-    }, 3000);
+    }, 6000);
   }
 }

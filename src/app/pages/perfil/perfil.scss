@@ -1,6 +1,63 @@
-.outer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+  background: #f4f6fb;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+//   &:hover {
+//     transform: translateY(-4px);
+//     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+//   }
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  svg {
+    width: 60%;
+    height: 60%;
+    fill: #fff;
+  }
+}
+
+.welcome {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.5rem;
+
+  .username {
+    font-weight: 700;
+    color: #2575fc;
+  }
+}
+
+.balance {
+  font-size: 1rem;
+  color: #444;
+
+  .amount {
+    font-weight: 700;
+    color: #2e7d32;
+  }
 }

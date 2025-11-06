@@ -1,14 +1,21 @@
-<div class="outer_div">
-  <form [formGroup]="login" (ngSubmit)="onSubmit()" >
-    <label>E-mail institucional:</label>
-    <input formControlName="email" />
-    <div *ngIf="login.get('email')?.invalid && login.get('email')?.touched">
-      É necessário o e-mail institucional.
-    </div>
+<div class="login-container">
+  <div class="login-card">
+    <form [formGroup]="login" (ngSubmit)="onSubmit()">
+      <h2 class="login-title">Acesso ao Sistema</h2>
 
-    <label>Senha:</label>
-    <input formControlName="password" type="password" />
-<br>
-    <button type="submit" [disabled]="!login.valid">Submit</button>
-  </form>
+      <label for="email">E-mail institucional:</label>
+      <input id="email" formControlName="email" type="email" placeholder="seu.nome@unesp.br" />
+      <div *ngIf="login.get('email')?.invalid && login.get('email')?.touched" class="error">
+        É necessário o e-mail institucional.
+      </div>
+
+      <label for="password">Senha:</label>
+      <input id="password" formControlName="password" type="password" placeholder="Sua senha" />
+      <div *ngIf="login.get('password')?.invalid && login.get('password')?.touched" class="error">
+        Senha obrigatória.
+      </div>
+
+      <button type="submit" [disabled]="!login.valid" class="fancy-btn">Entrar</button>
+    </form>
+  </div>
 </div>

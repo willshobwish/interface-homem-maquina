@@ -1,14 +1,14 @@
 <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
   <div class="outer_div">
-  <div>{{ datarefeicao }}</div>
+  <div><span class="main">Data:</span> {{ datarefeicao }}</div>
   <div class="outer">
-    <div><span style="font-weight: bold;">Prato principal:</span> {{ principal }}</div>
-    <div><span style="font-weight: bold;">Acompanhamento:</span> {{ acompanhamento }}</div>
-    <div><span style="font-weight: bold;">Salada:</span> {{ salada }}</div>
-    <div><span style="font-weight: bold;">Suco:</span> {{ suco }} | <span style="font-weight: bold;">Sobremesa:</span> {{ sobremesa }}</div>
+    <div><span class="main">Prato principal:</span> {{ principal }}</div>
+    <div><span class="main">Acompanhamento:</span> {{ acompanhamento }}</div>
+    <div><span class="main">Salada:</span> {{ salada }}</div>
+    <div><span class="main">Suco:</span> {{ suco }} | <span style="font-weight: bold;">Sobremesa:</span> {{ sobremesa }}</div>
   </div>
   <div>
-    <button style="display: flex; align-items: center; ">
+    <button class="fancy-btn">
       <svg
         fill="#000000"
         width="25px"
