@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-refeicao-venda',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './refeicao-venda.html',
   styleUrls: ['./refeicao-venda.scss'], // also fix plural
 })

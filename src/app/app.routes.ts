@@ -5,6 +5,8 @@ import { Compra } from './pages/compra/compra';
 import { Venda } from './pages/venda/venda';
 import { FilaCompra } from './pages/fila-compra/fila-compra';
 import { PaginaNaoEncontrada } from './pages/pagina-nao-encontrada/pagina-nao-encontrada';
+import { VendidoSucesso } from './pages/vendido-sucesso/vendido-sucesso';
+import { CompradoSucesso } from './pages/comprado-sucesso/comprado-sucesso';
 
 export const routes: Routes = [
   {
@@ -37,7 +39,16 @@ export const routes: Routes = [
     path: 'fila-compra',
     component: FilaCompra,
     title: 'Fila de compra',
-  },  { path: '**', 
-    component: PaginaNaoEncontrada, 
-    title: 'Página não encontrada' },
+  },
+  {
+    path: 'comprado-com-sucesso',
+    component: CompradoSucesso,
+    title: 'Comprado com sucesso',
+  },
+  {
+    path: 'vendido-com-sucesso',
+    component: VendidoSucesso,
+    title: 'Vendido com sucesso',
+  },
+  { path: '**', component: PaginaNaoEncontrada, title: 'Página não encontrada' },
 ];
