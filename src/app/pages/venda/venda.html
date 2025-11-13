@@ -1,7 +1,15 @@
-<div style="display: flex; flex-direction: row;">
-  <div style="margin-top: 10px;margin-bottom: 10px;">Qual refeição deseja vender?</div>
+<div style="display: flex; flex-direction: row">
+  <div style="margin-top: 10px; margin-bottom: 10px">Qual refeição deseja vender?</div>
 </div>
-<div *ngFor="let item of cardapio">
+
+<div class="date-container">
+  <div class="date-wrapper">
+    <label class="input-label">Selecione uma data:</label>
+    <input type="date" class="date-input" [(ngModel)]="searchDate" />
+  </div>
+</div>
+
+<div *ngFor="let item of cardapio | filterByDate : searchDate">
   <app-refeicao-venda
     [principal]="item.principal"
     [acompanhamento]="item.acompanhamento"
