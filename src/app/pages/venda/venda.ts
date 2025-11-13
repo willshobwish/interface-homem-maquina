@@ -1,14 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RefeicaoVenda } from '../../components/refeicao-venda/refeicao-venda';
 import { CommonModule } from '@angular/common';
-
+import { FilterByDatePipe } from '../../pipes/filter-by-date-pipe';
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-venda',
-  imports: [CommonModule, RefeicaoVenda],
+  imports: [CommonModule, RefeicaoVenda, FilterByDatePipe, FormsModule],
   templateUrl: './venda.html',
   styleUrl: './venda.scss',
 })
-export class Venda {
+export class Venda implements OnInit {
+  ngOnInit(): void {}
+  searchDate: string = '';
   cardapio = [
     {
       data: '06/10/2025',

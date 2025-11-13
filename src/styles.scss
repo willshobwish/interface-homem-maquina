@@ -65,3 +65,80 @@ body {
 .main{
   font-weight: bold
 }
+
+.date-input {
+  display: inline-block;
+  width: 250px;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  background: #fff;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  // Borda com gradiente ao focar
+  &:focus {
+    border-color: transparent;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(37, 117, 252, 0.3);
+    transition: all 0.3s ease;
+
+    &::-webkit-calendar-picker-indicator {
+      filter: invert(1);
+    }
+  }
+
+  // Ícone do seletor de data
+  // &::-webkit-calendar-picker-indicator {
+  //   background: transparent;
+  //   color: #6a11cb;
+  //   opacity: 0.8;
+  //   transition: opacity 0.2s ease;
+  //   cursor: pointer;
+
+  //   &:hover {
+  //     opacity: 1;
+  //   }
+  // }
+
+  // Efeito hover leve
+  &:hover {
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+    transform: translateY(-1px);
+  }
+
+  // Quando estiver desabilitado
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+// Classe adicional opcional para rótulos
+.input-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.date-container {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Centraliza verticalmente */
+  margin-bottom: 20px;           /* Ocupa a tela inteira */
+  // background: #f8f9fc;     /* Opcional, um leve fundo */
+}
+
+.date-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza o label e o input */
+  gap: 0.5rem;         /* Espaço entre o label e o input */
+}

@@ -1,8 +1,8 @@
-import { Component ,Input } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-refeicao-compra',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './refeicao-compra.html',
   styleUrl: './refeicao-compra.scss',
 })

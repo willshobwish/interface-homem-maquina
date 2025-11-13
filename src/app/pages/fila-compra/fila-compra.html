@@ -1,1 +1,13 @@
-<p>fila-compra works!</p>
+<div class="fila-container">
+  <h2>Fila Virtual</h2>
+  <p>Sua posição na fila: {{ suaPosicao === 0 ? 'Agora!' : suaPosicao }}</p>
+  <p>Pessoas restantes na fila: {{ pessoasRestantes }}</p>
+
+  <div class="progress-bar-bg">
+    <div 
+      class="progress-bar-fill"
+      [style.width.%]="getProgresso()">
+    </div>
+  </div>
+
+</div>
